@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<STYLE>
+		body{
+			font-family: 'Neuton', serif; 
+			background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+            font-size: 16px;
+		}
+		.design{
+    	border-radius: 0;
+
+    }
+    .design2{
+    	text-align: center;
+    }
+		
+			.logo{
+        font-family: 'Potta One', cursive;
+        font-size: 30px;   
+		}
+		.container{
+			border:1px solid black;
+			margin: auto;
+			width: 700px;
+			padding: 30px;
+		}
+		@media screen and (max-width: 850px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 500px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 600px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 350px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 350px)
+    {
+    	.container{
+    		width: 100%;
+    	}
+    }
+	</STYLE>
+	</head>
+
+<body>
+	<nav class="navbar navbar-inverse design">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="#">BIOLOGY</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right design2" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="quiz home.html">HOME</a></li>
+        <li class="active"><a href="quiz categories.html">CATEGORIES</a></li>
+        <li><a href="quiz about.html">ABOUT</a></li>
+        <li ><a href="quiz feedback.html">FEEDBACK</a></li>
+      </ul>  
+  </div>
+  </div>
+</nav>
+<div class="container">
+<form name="bioquiz" id="bioquiz">
+	<div>
+		<p>1. Plants receive their nutrients mainly from</p>
+		<p><input type="radio" name="bio1" value="chlorophyll ">A. Chlorophyll </p>
+		<p><input type="radio" name="bio1" value="atmosphere">B. Atmosphere</p>
+		<p><input type="radio" name="bio1" value="light">C. Light</p>
+		<p><input type="radio" name="bio1" value="soil">D. Soil</p>
+	</div>
+	<div>
+		<p>2. The metal present in the haemoglobin is </p>
+		<p><input type="radio" name="bio2" value="Copper">A. Copper </p>
+		<p><input type="radio" name="bio2" value="Calcium">B. Calcium </p>
+		<p><input type="radio" name="bio2" value=" Iron">C.  Iron</p>
+		<p><input type="radio" name="bio2" value="Aluminium">D. Aluminium </p>
+	</div>
+	<div>
+		<p>3. The important sugar in honey is  </p>
+		<p><input type="radio" name="bio3" value="  Lactose">A.  Lactose  </p>
+		<p><input type="radio" name="bio3" value="Fructose">B. Fructose</p>
+		<p><input type="radio" name="bio3" value="Maltose">C. Maltose </p>
+		<p><input type="radio" name="bio3" value=" Sucrose">D.  Sucrose </p>
+	</div>
+	<div>
+		<p>4.  The number of Chromosomes in the human gene is</p>
+		<p><input type="radio" name="bio4" value="23">A. 23</p>
+		<p><input type="radio" name="bio4" value="48">B. 48</p>
+		<p><input type="radio" name="bio4" value="46">C. 46</p>
+		<p><input type="radio" name="bio4" value="24">D. 24 </p>
+	</div>
+	<div>
+		<p>5. Which of the following acid present in Vinegar?</p>
+		<p><input type="radio" name="bio5" value="Citric Acid ">A. Citric Acid  </p>
+		<p><input type="radio" name="bio5" value=" Acetic Acid">B. Acetic Acid </p>
+		<p><input type="radio" name="bio5" value="Oxalic Acid">C. Oxalic Acid</p>
+		<p><input type="radio" name="bio5" value=" Malic Acid">D. Malic Acid</p>
+	</div>
+	<center><button onclick="score()">Submit</button></center>
+	</form>
+</div>
+<script>
+	function score() {
+		var s=0;
+		var q6=document.bioquiz.bio1.value;
+		var q7=document.bioquiz.bio2.value;
+		var q8=document.bioquiz.bio3.value;
+		var q9=document.bioquiz.bio4.value;
+		var q10=document.bioquiz.bio5.value;
+		if(q6=="soil"){s++;}
+		if(q7==" Iron"){s++;}
+		if(q8=="Fructose"){s++;}
+		if(q9=="46"){s++;}
+        if(q10==" Acetic Acid"){s++;}
+		alert("Your score is"+" "+s);
+	}
+</script>
+	</body>
+</html>
