@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<STYLE>
+		body{
+			font-family: 'Neuton', serif; 
+			background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+            font-size: 16px;
+		}
+		.design{
+    	border-radius: 0;
+
+    }
+    .design2{
+    	text-align: center;
+    }
+		
+			.logo{
+        font-family: 'Potta One', cursive;
+        font-size: 30px;   
+		}
+		.container{
+			border:1px solid black;
+			margin: auto;
+			width: 700px;
+			padding: 30px;
+		}
+		@media screen and (max-width: 850px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 500px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 600px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 350px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 350px)
+    {
+    	.container{
+    		width: 100%;
+    	}
+    }
+	</STYLE>
+	</head>
+
+<body>
+	<nav class="navbar navbar-inverse design">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="#">MATHEMATICS</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right design2" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="quiz home.html">HOME</a></li>
+        <li class="active"><a href="quiz categories.html">CATEGORIES</a></li>
+        <li><a href="quiz about.html">ABOUT</a></li>
+        <li ><a href="quiz feedback.html">FEEDBACK</a></li>
+      </ul>  
+  </div>
+  </div>
+</nav>
+<div class="container">
+<form name="mathquiz" id="mathquiz">
+	<div>
+		<p>1. In a century how many months are there? </p>
+		<p><input type="radio" name="math1" value="12">A. 12</p>
+		<p><input type="radio" name="math1" value="120">B. 120</p>
+		<p><input type="radio" name="math1" value="1200">C. 1200</p>
+		<p><input type="radio" name="math1" value="12000">D. 12000</p>
+	</div>
+	<div>
+		<p>2. What is the reciprocal of 17/15?</p>
+		<p><input type="radio" name="math2" value="13">A. 13 </p>
+		<p><input type="radio" name="math2" value="15/17">B. 15/17</p>
+		<p><input type="radio" name="math2" value="17/15">C. 17/15</p>
+		<p><input type="radio" name="math2" value="30/34">D. 30/34 </p>
+	</div>
+	<div>
+		<p>3. What is the value of x if x<sup>2</sup> = 169?  </p>
+		<p><input type="radio" name="math3" value="1">A.  1  </p>
+		<p><input type="radio" name="math3" value="13">B. 13</p>
+		<p><input type="radio" name="math3" value="169">C. 169 </p>
+		<p><input type="radio" name="math3" value="338">D. 338 </p>
+	</div>
+	<div>
+		<p>4.  How many years are there in a decade?</p>
+		<p><input type="radio" name="math4" value="5">A. 5</p>
+		<p><input type="radio" name="math4" value="10">B. 10</p>
+		<p><input type="radio" name="math4" value="15">C. 15</p>
+		<p><input type="radio" name="math4" value="20">D. 20</p>
+	</div>
+	<div>
+		<p>5. I am a number. I have 7 in the ones place. I am less than 80 but greater than 70. What is my number?</p>
+		<p><input type="radio" name="math5" value="71">A. 71 </p>
+		<p><input type="radio" name="math5" value="73">B. 73 </p>
+		<p><input type="radio" name="math5" value="74">C. 74</p>
+		<p><input type="radio" name="math5" value="77">D. 77</p>
+	</div>
+	<center><button onclick="score()">Submit</button></center>
+	</form>
+</div>
+<script>
+	function score() {
+		var s=0;
+		var q16=document.mathquiz.math1.value;
+		var q17=document.mathquiz.math2.value;
+		var q18=document.mathquiz.math3.value;
+		var q19=document.mathquiz.math4.value;
+		var q20=document.mathquiz.math5.value;
+		if(q16=="1200"){s++;}
+		if(q17=="15/17"){s++;}
+		if(q18=="13"){s++;}
+		if(q19=="10"){s++;}
+        if(q20=="77"){s++;}
+		alert("Your score is"+" "+s);
+	}
+</script>
+	</body>
+</html>

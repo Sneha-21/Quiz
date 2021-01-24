@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CS Quiz</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<STYLE>
+		body{
+			font-family: 'Neuton', serif; 
+			background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+            font-size: 16px;
+		}
+		.design{
+    	border-radius: 0;
+
+    }
+    .design2{
+    	text-align: center;
+    }
+		
+	    .logo{
+        font-family: 'Potta One', cursive;
+        font-size: 30px;   
+		}
+		.container{
+			border:1px solid black;
+			margin: auto;
+			width: 700px;
+			padding: 30px;
+		}
+		@media screen and (max-width: 850px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 500px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 600px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 350px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 350px)
+    {
+    	.container{
+    		width: 100%;
+    	}
+    }
+	</STYLE>
+	</head>
+
+<body>
+	<nav class="navbar navbar-inverse design">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="#">CSC</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right design2" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="quiz home.html">HOME</a></li>
+        <li class="active"><a href="quiz categories.html">CATEGORIES</a></li>
+        <li><a href="quiz about.html">ABOUT</a></li>
+        <li ><a href="quiz feedback.html">FEEDBACK</a></li>
+      </ul>  
+  </div>
+  </div>
+</nav>
+<div class="container">
+<form name="csquiz" id="csquiz">
+	<div>
+		<p>1. The type of computer, which has the properties of both i.e. analogue computer and digital computer, is known as …</p>
+		<p><input type="radio" name="cs1" value="Anologue-cum Digital Computer">A. Anologue-cum Digital Computer </p>
+		<p><input type="radio" name="cs1" value="Super Computer">B. Super Computer</p>
+		<p><input type="radio" name="cs1" value="Hybrid Computer">C. Hybrid Computer</p>
+		<p><input type="radio" name="cs1" value="Computer of future">D. Computer of future</p>
+	</div>
+	<div>
+		<p>2. Which among the following controls all parts of the computer and known as the brain of computer?</p>
+		<p><input type="radio" name="cs2" value="RAM">A. RAM </p>
+		<p><input type="radio" name="cs2" value="ROM">B. ROM </p>
+		<p><input type="radio" name="cs2" value="CPU">C. CPU</p>
+		<p><input type="radio" name="cs2" value="Processor">D. Processor </p>
+	</div>
+	<div>
+		<p>3. The Third Generation Computer used </p>
+		<p><input type="radio" name="cs3" value=" Transistors">A. Transistors  </p>
+		<p><input type="radio" name="cs3" value="Integrated circuit">B. Integrated circuit</p>
+		<p><input type="radio" name="cs3" value="Vacuum tube">C. Vacuum tube </p>
+		<p><input type="radio" name="cs3" value="Chip">D. Chip </p>
+	</div>
+	<div>
+		<p>4.  Which among the following is not an output device (for a computer)?</p>
+		<p><input type="radio" name="cs4" value="Bar code reader">A. Bar code reader </p>
+		<p><input type="radio" name="cs4" value="Plotter">B. Plotter</p>
+		<p><input type="radio" name="cs4" value="Speaker">C. Speaker</p>
+		<p><input type="radio" name="cs4" value="Monitor">D. Monitor </p>
+	</div>
+	<div>
+		<p>5. Which one of the following language is developed by Microsoft?</p>
+		<p><input type="radio" name="cs5" value="Java ">A. Java  </p>
+		<p><input type="radio" name="cs5" value="C#">B. C# </p>
+		<p><input type="radio" name="cs5" value="Python">C. Python</p>
+		<p><input type="radio" name="cs5" value=" SHELL">D. SHELL </p>
+	</div>
+	<center><button onclick="score()">Submit</button></center>
+	</form>
+</div>
+<script>
+	function score() {
+		var s=0;
+		var q1=document.csquiz.cs1.value;
+		var q2=document.csquiz.cs2.value;
+		var q3=document.csquiz.cs3.value;
+		var q4=document.csquiz.cs4.value;
+		var q5=document.csquiz.cs5.value;
+		if(q1=="Hybrid Computer"){s++;}
+		if(q2=="CPU"){s++;}
+		if(q3=="Integrated circuit"){s++;}
+		if(q4=="Bar code reader"){s++;}
+        if(q5=="C#"){s++;}
+		alert("Your score is"+" "+s);
+	}
+</script>
+	</body>
+</html>

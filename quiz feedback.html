@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Feedback</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<STYLE>
+    body{
+
+			font-family: 'Neuton', serif; 
+			background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+			font-size: 16px;
+    }
+    .design{
+    	border-radius: 0;
+
+    }
+    .design2{
+    	text-align: center;
+    }
+    .logo{
+    	font-family: 'Potta One', cursive;
+        font-size: 30px;   
+    }
+    @media screen and (max-width: 540px)
+    {
+    	textarea{
+    		width: 100%;
+    	}
+    }
+    </STYLE>
+  </head>
+<body>
+<nav class="navbar navbar-inverse design">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="#">QUIZ</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right design2" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="quiz home.html">HOME</a></li>
+        <li><a href="quiz categories.html">CATEGORIES</a></li>
+        <li><a href="quiz about.html">ABOUT</a></li>
+        <li class="active"><a href="quiz feedback.html">FEEDBACK</a></li>
+      </ul>  
+  </div>
+  </div>
+</nav>
+<form name="form1" action="#" onsubmit="required()">
+<p style="text-align: center;margin-top: 100px;">Help us improve our work!!</p> 
+<center><textarea id="quizfeedback" name="quizfeedback" rows="10" cols="70" ></textarea></center>
+
+<center><input type="submit"  value="Submit" /></center>
+ 
+  </form>
+  <script >
+    function required()
+{
+var empt = document.form1.quizfeedback.value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Thank you for your feedback');
+return true; 
+}
+}
+  </script>
+  </body>
+  </html>

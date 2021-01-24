@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<STYLE>
+		body{
+			font-family: 'Neuton', serif; 
+			background-image: url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&w=1000&q=80");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			background-attachment: fixed;
+            font-size: 16px;
+		}
+		.design{
+    	border-radius: 0;
+
+    }
+    .design2{
+    	text-align: center;
+    }
+		
+			.logo{
+        font-family: 'Potta One', cursive;
+        font-size: 30px;   
+		}
+		.container{
+			border:1px solid black;
+			margin: auto;
+			width: 700px;
+			padding: 30px;
+		}
+		@media screen and (max-width: 850px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 500px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 600px){
+			.container{
+			border:1px solid black;
+			margin: auto;
+			width: 350px;
+			padding: 30px;
+		}
+		}
+		@media screen and (max-width: 350px)
+    {
+    	.container{
+    		width: 100%;
+    	}
+    }
+	</STYLE>
+	</head>
+
+<body>
+	<nav class="navbar navbar-inverse design">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand logo" href="#">GEOGRAPHY</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right design2" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="quiz home.html">HOME</a></li>
+        <li class="active"><a href="quiz categories.html">CATEGORIES</a></li>
+        <li><a href="quiz about.html">ABOUT</a></li>
+        <li ><a href="quiz feedback.html">FEEDBACK</a></li>
+      </ul>  
+  </div>
+  </div>
+</nav>
+<div class="container">
+<form name="geoquiz" id="geoquiz">
+	<div>
+		<p>1. Which of the following state is the largest producer of tea in India?</p>
+		<p><input type="radio" name="geo1" value="Karnataka">A.  Karnataka </p>
+		<p><input type="radio" name="geo1" value="Assam">B.  Assam</p>
+		<p><input type="radio" name="geo1" value="West Bengal">C. West Bengal</p>
+		<p><input type="radio" name="geo1" value="Tamil Nadu">D. Tamil Nadu</p>
+	</div>
+	<div>
+		<p>2. Which is the deepest point from the sea level on the Earth? </p>
+		<p><input type="radio" name="geo2" value="North Channel">A. North Channel </p>
+		<p><input type="radio" name="geo2" value="Pacific Ocean">B. Pacific Ocean</p>
+		<p><input type="radio" name="geo2" value="Mariana Trench">C. Mariana Trench</p>
+		<p><input type="radio" name="geo2" value="Red Sea">D. Red Sea </p>
+	</div>
+	<div>
+		<p>3. How many types of cyclones are there?  </p>
+		<p><input type="radio" name="geo3" value="2">A.  2  </p>
+		<p><input type="radio" name="geo3" value="3">B. 3</p>
+		<p><input type="radio" name="geo3" value="4">C. 4 </p>
+		<p><input type="radio" name="geo3" value="5">D.  5 </p>
+	</div>
+	<div>
+		<p>4.  Which term for Cyclone is applied in the China Sea and the Pacific Ocean?</p>
+		<p><input type="radio" name="geo4" value="Hurricane">A. Hurricane</p>
+		<p><input type="radio" name="geo4" value="Typhoon">B. Typhoon</p>
+		<p><input type="radio" name="geo4" value="Tornadoes">C. Tornadoes</p>
+		<p><input type="radio" name="geo4" value="None of the above">D. None of the above </p>
+	</div>
+	<div>
+		<p>5. During a calendar year, the maximum numbers of lunar eclipse that can occur are:</p>
+		<p><input type="radio" name="geo5" value="2">A. 2 </p>
+		<p><input type="radio" name="geo5" value="3">B. 3 </p>
+		<p><input type="radio" name="geo5" value="4">C. 4</p>
+		<p><input type="radio" name="geo5" value="5">D. 5</p>
+	</div>
+	<center><button onclick="score()">Submit</button></center>
+	</form>
+</div>
+<script>
+	function score() {
+		var s=0;
+		var q11=document.geoquiz.geo1.value;
+		var q12=document.geoquiz.geo2.value;
+		var q13=document.geoquiz.geo3.value;
+		var q14=document.geoquiz.geo4.value;
+		var q15=document.geoquiz.geo5.value;
+		if(q11=="Assam"){s++;}
+		if(q12=="Mariana Trench"){s++;}
+		if(q13=="2"){s++;}
+		if(q14=="Typhoon"){s++;}
+        if(q15=="3"){s++;}
+		alert("Your score is"+" "+s);
+	}
+</script>
+	</body>
+</html>
